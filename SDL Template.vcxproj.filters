@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Core Classes">
+      <UniqueIdentifier>{2deeafda-6659-4bb8-a54c-1fa508552cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core Classes">
+      <UniqueIdentifier>{ec7025e5-df27-409d-8103-0c858cddceaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SDL Template\src\Main.cpp">
@@ -21,10 +27,16 @@
     <ClCompile Include="SDL Template\src\SDLInit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDL Template\src\Sprite.cpp">
+      <Filter>Source Files\Core Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDL Template\include\SDLInit.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL Template\include\Sprite.h">
+      <Filter>Header Files\Core Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
