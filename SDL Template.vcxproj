@@ -152,11 +152,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="SDL Template\src\AnimSprite.cpp" />
     <ClCompile Include="SDL Template\src\Main.cpp" />
     <ClCompile Include="SDL Template\src\SDLInit.cpp" />
     <ClCompile Include="SDL Template\src\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SDL Template\include\AnimSprite.h" />
     <ClInclude Include="SDL Template\include\SDLInit.h" />
     <ClInclude Include="SDL Template\include\Sprite.h" />
   </ItemGroup>

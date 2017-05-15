@@ -72,3 +72,9 @@ void Sprite::Draw(int _x, int _y, int _angle, SDL_RendererFlip _flip)
 		SDL_RenderCopyEx(renderer, tex, NULL, &posRect, angle, NULL, flip);
 	}
 }
+
+void Sprite::SetSize(int _w, int _h)
+{
+	posRect.w = _w;
+	posRect.h = _h;
+}

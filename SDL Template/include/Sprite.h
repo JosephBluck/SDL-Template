@@ -12,6 +12,8 @@ public:
 	virtual void Draw(int _x, int _y, SDL_RendererFlip _flip); //Draw sprite at set position with a flip
 	virtual void Draw(int _x, int _y, int _angle, SDL_RendererFlip _flip); //Draw with position, flip and rotation
 
+	void SetSize(int _w, int _h); //Set the sprite size
+
 	//Data Retrieval Commands
 	SDL_Rect& GetRect() { return posRect; } //Returns positional rectangle of the sprite
 	
