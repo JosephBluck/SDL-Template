@@ -18,4 +18,43 @@ bool InitExtensions()
 		system("pause");
 		return false;
 	}
+
+	if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1) { //Start the mixer
+		std::cout << "SDL Mixer failed to initialise: " << Mix_GetError() << "\n";
+		system("pause");
+		return false;
+	}
+
+	return true;
+}
+
+bool SetupRenderer(SDL_Window* _window, SDL_Renderer* _renderer, int _width, int _height)
+{
+	_window = SDL_CreateWindow("SDL Template", 10, 10, _width, _height, SDL_WINDOW_SHOWN);
+
+	if (_window == NULL) {
+		std::cout << "Window failed to start: " << SDL_GetError() << "\n";
+		system("pause");
+		return false;
+	}
+
+	_renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+	if (_renderer == NULL) {
+		std::cout << "Renderer failed to start: " << SDL_GetError() << "\n";
+		system("pause");
+		return false;
+	}
+
+	return true;
+}
+
+void CloseSDL(SDL_Window* _window, SDL_Renderer* _renderer)
+{
+	if(_renderer != NULL) { SDL_DestroyRenderer(_renderer); } //Check if valid pointers
+	if (_window != NULL) { SDL_DestroyWindow(_window); }
+
+	Mix_Quit();
+	IMG_Quit();
+	SDL_Quit();
 }

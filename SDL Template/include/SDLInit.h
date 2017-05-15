@@ -8,4 +8,7 @@
 
 bool InitSDL(); //Initalise all of base SDL2
 bool InitExtensions(); //Initialise Image and Mixer extensions
-bool SetupRenderer(SDL_Window* window, SDL_Renderer* renderer);
+bool SetupRenderer(SDL_Window* _window, SDL_Renderer* _renderer, int _width, int _height); //Start an SDL Window and Renderer
+void CloseSDL(SDL_Window* _window, SDL_Renderer* _renderer); //Destroy the given window and renderer and close SDL and it's extentions*
+
+// * NULL pointers are also valid input in the case that the window and/or renderer didn't create correctly
