@@ -25,6 +25,12 @@ bool InitExtensions()
 		return false;
 	}
 
+	if (SDLNet_Init() == -1) {
+		std::cout << "SDLNet failed to initialise: " << SDLNet_GetError() << "\n";
+		system("pause");
+		return false;
+	}
+
 	return true;
 }
 
@@ -54,7 +60,9 @@ void CloseSDL(SDL_Window* _window, SDL_Renderer* _renderer)
 	if(_renderer != NULL) { SDL_DestroyRenderer(_renderer); } //Check if valid pointers
 	if (_window != NULL) { SDL_DestroyWindow(_window); }
 
+	SDLNet_Quit();
 	Mix_Quit();
 	IMG_Quit();
 	SDL_Quit();
 }
+
