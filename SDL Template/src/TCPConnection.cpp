@@ -63,7 +63,7 @@ bool TCPConnection::Init()
 
 void TCPConnection::Send(std::string _data)
 {
-	strcpy(buffer, _data.c_str()); //Copy data to buffer
+	strcpy_s(buffer, _data.c_str()); //Copy data to buffer
 
 	int len = strlen(buffer) + 1; //Specify length as one greater than the buffer to allow for \0 terminator
 
