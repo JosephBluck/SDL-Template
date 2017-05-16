@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Core Classes">
       <UniqueIdentifier>{ec7025e5-df27-409d-8103-0c858cddceaf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LODEPNG">
+      <UniqueIdentifier>{40b38645-3cac-46f8-a378-9a38c088549b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SDL Template\src\Main.cpp">
@@ -33,6 +36,18 @@
     <ClCompile Include="SDL Template\src\AnimSprite.cpp">
       <Filter>Source Files\Core Classes</Filter>
     </ClCompile>
+    <ClCompile Include="SDL Template\src\InputManager.cpp">
+      <Filter>Source Files\Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL Template\src\CollisionMap.cpp">
+      <Filter>Source Files\Core Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\LodePNG.cpp">
+      <Filter>LODEPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL Template\src\SoundManager.cpp">
+      <Filter>Source Files\Core Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDL Template\include\SDLInit.h">
@@ -42,6 +57,18 @@
       <Filter>Header Files\Core Classes</Filter>
     </ClInclude>
     <ClInclude Include="SDL Template\include\AnimSprite.h">
+      <Filter>Header Files\Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL Template\include\InputManager.h">
+      <Filter>Header Files\Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL Template\include\CollisionMap.h">
+      <Filter>Header Files\Core Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\LodePNG.h">
+      <Filter>LODEPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL Template\include\SoundManager.h">
       <Filter>Header Files\Core Classes</Filter>
     </ClInclude>
   </ItemGroup>

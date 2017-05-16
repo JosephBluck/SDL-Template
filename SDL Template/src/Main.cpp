@@ -1,12 +1,14 @@
 #include "SDLInit.h"
+#include "CollisionMap.h"
+#include <chrono>
 
 #define WINDOWHEIGHT 1280 //Configure values for screen size here
 #define WINDOWWIDTH 720
 
 int main(int arc, char* args[])
 {
-	SDL_Window* window;
-	SDL_Renderer* renderer;
+	SDL_Window* window = NULL;
+	SDL_Renderer* renderer = NULL;
 
 	//Initialise Everything
 	if (!InitSDL()) { return -1; }
@@ -21,8 +23,6 @@ int main(int arc, char* args[])
 		return -3;
 	}
 
-	//If you get this far, everything started correctly
-
-	system("pause"); //Pause for debugging purposes
+	system("pause");
 	return 0;
 }
